@@ -296,6 +296,7 @@ class _TimerScreenState extends State<TimerScreen>
             controller: controller,
             keyboardType: TextInputType.number,
             textAlign: TextAlign.center,
+            onTapOutside: (_) => FocusScope.of(context).unfocus(),
             style: const TextStyle(
               fontSize: 48,
               fontWeight: FontWeight.bold,
