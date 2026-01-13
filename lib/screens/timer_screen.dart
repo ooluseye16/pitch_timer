@@ -184,18 +184,18 @@ class _TimerScreenState extends State<TimerScreen>
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
-        appBar: AppBar(
-          backgroundColor: Colors.white.withValues(alpha: 0.95),
-          elevation: 0,
-          title: const Text(
-            'Pitch Timer',
-            style: TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.w600,
-              letterSpacing: 0.5,
-            ),
-          ),
-        ),
+        // appBar: AppBar(
+        //   backgroundColor: Colors.white.withValues(alpha: 0.95),
+        //   elevation: 0,
+        //   title: const Text(
+        //     'Pitch Timer',
+        //     style: TextStyle(
+        //       color: Colors.black,
+        //       fontWeight: FontWeight.w600,
+        //       letterSpacing: 0.5,
+        //     ),
+        //   ),
+        // ),
         body: SafeArea(
           child: Padding(
             padding: const EdgeInsets.all(24.0),
