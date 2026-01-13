@@ -280,29 +280,43 @@ class _TimerScreenState extends State<TimerScreen>
         color: Colors.white,
         borderRadius: BorderRadius.circular(20),
       ),
-      child: TextField(
-        controller: controller,
-        keyboardType: TextInputType.number,
-        textAlign: TextAlign.center,
-        style: const TextStyle(
-          fontSize: 48,
-          fontWeight: FontWeight.bold,
-          color: Colors.black,
-        ),
-        decoration: InputDecoration(
-          labelText: label,
-          labelStyle: TextStyle(
-            color: Colors.grey[600],
-            fontWeight: FontWeight.w500,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            label,
+            style: TextStyle(
+              color: Colors.grey[700],
+              fontSize: 12,
+              fontWeight: FontWeight.w600,
+            ),
           ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(20),
-            borderSide: BorderSide.none,
+          const SizedBox(height: 8),
+          TextField(
+            controller: controller,
+            keyboardType: TextInputType.number,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+              fontSize: 48,
+              fontWeight: FontWeight.bold,
+              color: Colors.black,
+            ),
+            decoration: InputDecoration(
+              hintText: '00',
+              hintStyle: TextStyle(
+                color: Colors.grey[300],
+                fontWeight: FontWeight.bold,
+              ),
+              border: OutlineInputBorder(
+                borderRadius: BorderRadius.circular(20),
+                borderSide: BorderSide.none,
+              ),
+              filled: true,
+              fillColor: Colors.white,
+              contentPadding: const EdgeInsets.symmetric(vertical: 20),
+            ),
           ),
-          filled: true,
-          fillColor: Colors.white,
-          contentPadding: const EdgeInsets.symmetric(vertical: 20),
-        ),
+        ],
       ),
     );
   }
